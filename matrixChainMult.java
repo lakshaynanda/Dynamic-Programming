@@ -28,7 +28,7 @@ public class matrixChainMult {
     public static int matrixChainMultiplicationTab(int[] dims)
     {
         int [][]mcm=new int[dims.length][dims.length];
-        int min=Integer.MAX_VALUE;
+       
         for(int gap=1;gap<dims.length;gap++)
         {
             int i=0;int j=i+gap;
@@ -41,6 +41,7 @@ public class matrixChainMult {
                 }
                 else
                 {
+                    int min=Integer.MAX_VALUE;
                     for(int cp=i+1;cp<=j-1;cp++)
                     {
                         int fp=mcm[i][cp];
